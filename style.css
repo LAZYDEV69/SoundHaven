@@ -1,0 +1,458 @@
+.form-control.bg-secondary:focus {
+  background-color: #444;
+  border-color: #666;
+  box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.25);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control,
+.btn {
+  border-radius: 5px;
+}
+
+.container-fluid.bg-dark {
+  border-radius: 8px; /* Added border-radius to the background */
+  overflow: hidden; /* prevents inner elements from overflowing rounded corners. */
+}
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.custom-prev {
+  left: -10px; /* Adjust left position */
+}
+
+.custom-next {
+  right: -50px; /* Adjust right position */
+}
+
+/* Ensure buttons are visible inside the container */
+.library {
+  position: relative;
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.navbar {
+  background: transparent !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.search-container input {
+  width: 300px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  border: none;
+}
+.search-container button {
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+@media (max-width: 992px) {
+  .search-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-container form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.navbar .nav {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  align-items: center;
+  justify-content: center;
+}
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f8f9fa !important;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(89, 108, 255); /* Scrollbar color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 13, 255); /* Hover effect */
+}
+
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Makes sure the header takes up full screen */
+  overflow: hidden;
+}
+
+.header {
+  position: absolute; /* No longer affects normal flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.header h1 {
+  padding-top: 20%;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 100px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards,
+    shake 2s infinite alternate ease-in-out;
+  word-wrap: break-word;
+}
+/*.welcome {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards,
+    shake 2s infinite alternate ease-in-out;
+}
+
+/* 
+.welcome h1 {
+  padding-top: 4%;
+  color: white;
+  font-family: sans-serif;
+  font-size: 100px; 
+  text-align: center; 
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+  word-wrap: break-word; 
+}Smoothly appearing text */
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 80px;
+
+    top: 40%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .custom-next {
+    display: none;
+  }
+  .custom-prev {
+    display: none; /* Optional: Remove previous button too */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 50px;
+    padding: 10px;
+    top: 40%;
+
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .custom-next {
+    display: none;
+  }
+  .custom-prev {
+    display: none; /* Optional: Remove previous button too */
+  }
+}
+
+/* Extra small screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 36px;
+    padding: 5px;
+    top: 40%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .custom-next {
+    display: none;
+  }
+  .custom-prev {
+    display: none; /* Optional: Remove previous button too */
+  }
+}
+
+/* Keyframes for entrance effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth shaking effect */
+@keyframes shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+.custom-burger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1050;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  width: 1000px;
+  height: 80px;
+  background: none;
+  border: 4px solid #4038b7;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 26px;
+  color: #3871a5;
+  outline: none;
+  transition: 0.5s;
+}
+
+.input:focus {
+  width: 350px;
+  background: #3b3640;
+  border-radius: 10px;
+}
+
+.box i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 26px;
+  color: #ffd52d;
+  transition: 0.2s;
+}
+
+.input:focus + i {
+  opacity: 0;
+  z-index: -1;
+}
+
+.header h1 span {
+  color: rgb(84, 124, 255);
+}
+
+.owl-carousel .item {
+  text-align: center;
+}
+.owl-carousel .item img {
+  width: 100%;
+  border-radius: 10px;
+}
+.owl-carousel {
+  display: block !important;
+}
+
+.cardd h2 {
+  margin-top: 10px;
+}
+
+.cardd {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 200px; /* Ensure the item has enough width */
+}
+.cardd:hover {
+  background-color: #4e5057;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.cardd img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cardd:hover {
+  background-color: #4e5057;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+}
+
+/* Form */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline-light {
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: black;
+}

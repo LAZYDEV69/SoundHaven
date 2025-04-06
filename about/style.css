@@ -1,0 +1,243 @@
+* {
+  font-family: Poppins, sans-serif;
+}
+
+@media (max-width: 1285px) {
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-img img {
+    width: 56vw;
+  }
+}
+
+.navbar ul {
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  background: transparent !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.search-container input {
+  width: 300px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  border: none;
+}
+.search-container button {
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+@media (max-width: 992px) {
+  .search-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-container form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(89, 108, 255); /* Scrollbar color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 13, 255); /* Hover effect */
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f8f9fa !important;
+  border-radius: 5px;
+}
+
+.navbar {
+  padding: 10px 20px;
+  background-color: transparent;
+}
+.navbar-brand img {
+  height: 50px;
+  max-height: 50px;
+  padding-left: 10px;
+}
+.navbar .nav-link {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --bg-color: rgb(31, 31, 31);
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #05eff7;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+span {
+  background: linear-gradient(270deg, #1690e2 10%, #00d9ff 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.home-content h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 4rem;
+}
+.home-content p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: justify;
+}
+.home-img img {
+  width: 30vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.home-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+.developer {
+  background-color: var(--second-bg-color);
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.developer h2 {
+  font-size: 5rem;
+  color: var(--main-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.developer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 700px; /* Ensures two per row */
+  margin: 0 auto; /* Centers the container */
+}
+
+.developer-card {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 15px;
+  padding: 3rem;
+  flex: 1 1 calc(50% - 1.5rem); /* Two per row, accounting for gap */
+  max-width: 320px; /* Keeps the card size consistent */
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.developer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.5);
+}
+
+.developer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.developer-card h3 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.developer-card p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
